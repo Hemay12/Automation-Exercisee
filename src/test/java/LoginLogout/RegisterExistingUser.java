@@ -26,5 +26,7 @@ public class RegisterExistingUser {
 
         String incorrectString = driver.findElement(By.xpath("//p[@style='color: red;']")).getText();
         Assert.assertEquals("Email Address already exist!",incorrectString);
+
+        driver.quit();
     }
 }

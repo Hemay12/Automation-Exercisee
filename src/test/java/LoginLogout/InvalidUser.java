@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 public class InvalidUser {
 
-    @Test(groups = "Login")
+    @Test(groups = "login")
     public void InvalidUserVerify(){
 
         WebDriver driver = new ChromeDriver();
@@ -27,5 +27,7 @@ public class InvalidUser {
 
         String incorrectString = driver.findElement(By.xpath("//p[@style='color: red;']")).getText();
         Assert.assertEquals("Your email or password is incorrect!",incorrectString);
+
+        driver.quit();
     }
 }

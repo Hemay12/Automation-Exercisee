@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 public class LoginUser {
 
-    @Test(groups = "Login")
+    @Test(groups = "login")
     public void login(){
         WebDriver driver = new ChromeDriver();
 
@@ -35,7 +35,9 @@ public class LoginUser {
 
         driver.findElement(By.xpath("//a[normalize-space()='Delete Account']")).click();
         String acc_delete = driver.findElement(By.xpath("//h2[@data-qa='account-deleted']")).getText();
-        Assert.assertEquals("Account Deleted!",acc_delete);
+        Assert.assertEquals("ACCOUNT DELETED!",acc_delete);
+
+        driver.quit();
 
     }
 }

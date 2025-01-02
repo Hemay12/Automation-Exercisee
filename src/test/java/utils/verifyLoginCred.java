@@ -9,5 +9,4 @@ public class verifyLoginCred {
         String actualUrl = driver.getCurrentUrl();
         Assert.assertEquals(actualUrl, expectedUrl, "URL does not match the expected value.");
     }
-
 }

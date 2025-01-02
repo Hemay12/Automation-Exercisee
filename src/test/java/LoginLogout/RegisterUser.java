@@ -14,7 +14,7 @@ import java.time.Duration;
 
 public class RegisterUser {
 
-    @Test (groups = "Login")
+    @Test (groups = "login")
     public void userRegisteration(){
 
         WebDriver driver = new ChromeDriver();
@@ -27,7 +27,7 @@ public class RegisterUser {
         Assert.assertEquals(driver.getCurrentUrl(),"https://automationexercise.com/login");
 
         driver.findElement(By.xpath("//input[@data-qa='signup-name']")).sendKeys("Charles");
-        driver.findElement(By.xpath("//input[@data-qa='signup-email']")).sendKeys("dummyuser321012@gmail.com");
+        driver.findElement(By.xpath("//input[@data-qa='signup-email']")).sendKeys("dummyuserrr321012@gmail.com");
         driver.findElement(By.xpath("//button[@data-qa='signup-button']")).click();
 
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//input[@type='radio']"))));
@@ -75,6 +75,7 @@ public class RegisterUser {
 
 //        driver.findElement(By.xpath("//a[normalize-space()='Delete Account']")).click();
 
+        driver.quit();
 
     }
 }
