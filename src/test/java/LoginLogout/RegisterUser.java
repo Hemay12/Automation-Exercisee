@@ -73,7 +73,7 @@ public class RegisterUser {
         String combined = loggedInAs + username;
         Assert.assertEquals("Logged in as" + username, combined);
 
-        driver.findElement(By.xpath("//a[normalize-space()='Delete Account']")).click();
+//        driver.findElement(By.xpath("//a[normalize-space()='Delete Account']")).click();
 
 
     }

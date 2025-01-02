@@ -6,6 +6,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import static utils.verifyLoginCred.verifyCurrentUrl;
+
 public class VerifyLogout {
 
     @Test(groups = "Login")
@@ -14,7 +16,8 @@ public class VerifyLogout {
         WebDriver driver = new ChromeDriver();
         driver.get("https://automationexercise.com/");
         driver.manage().window().maximize();
-        Assert.assertEquals("https://automationexercise.com/", driver.getCurrentUrl());
+        verifyCurrentUrl(driver,"https://automationexercise.com/");
+
         driver.findElement(By.xpath("//a[@href='/login']")).click();
 
         String str = driver.findElement(By.xpath("//div[@class='login-form']/h2")).getText();
